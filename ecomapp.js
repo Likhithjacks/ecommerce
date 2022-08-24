@@ -17,7 +17,7 @@ app.listen(serverPort,async () => {
 async function init(){
     try{
         await sequelize.sync({force:true})
-   /*  const defaultcategory=[{
+    const defaultcategory=[{
             name:'fashion',
             description:'all type of brands'
         },
@@ -75,7 +75,7 @@ const defaultrole=[{
     name:"User"
 },{
     name:"Admin"
-}]*/
+}]
   await category.bulkCreate(defaultcategory)
   await Products.bulkCreate(defaultProducts)
   await Role.bulkCreate(defaultrole)
